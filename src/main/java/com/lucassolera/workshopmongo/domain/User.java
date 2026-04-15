@@ -23,7 +23,7 @@ public class User implements Serializable {
 	
 	
 	//referencia a uma coleção de dados
-	@DBRef(lazy = true)  // garante que os post so serão carregados se for chamado um usuario especifico                 
+	@DBRef(lazy = true)  //controla quando o campo será carregado               
 	private List<Post> posts = new ArrayList<>();
 	
 	public User() {
