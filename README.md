@@ -1,52 +1,138 @@
 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/devsuperior/sds1-wmazoni/blob/master/LICENSE) 
 
-# Sobre o projeto
+Sobre o projeto
 
-API desenvolvida utilizando Java com Spring Boot, JPA e Hibernate durante a realização de um curso de programação Java. O projeto consiste em uma API com banco de dados H2, contendo entidades como Produto, Item do Pedido, Pedido e Usuário, além de diferentes tipos de relacionamentos entre elas, adaptados para o paradigma de orientação a objetos.
+API desenvolvida utilizando Java com Spring Boot e MongoDB durante a realização de um curso de programação Java. O projeto consiste em uma API baseada em uma rede social simplificada, contendo as entidades User, Post e Comment, além dos relacionamentos entre elas, permitindo que usuários realizem publicações e interajam por meio de comentários.
 
-A aplicação segue o padrão de arquitetura MVC, contendo as camadas Model, Controller, Service e Repository para cada entidade do sistema. Além disso, o Postman foi utilizado para realizar os testes das requisições da API.
+A aplicação segue o padrão de arquitetura MVC, contendo as camadas Model, Controller, Service e Repository para cada entidade do sistema. Além dos relacionamentos entre as entidades, o MongoDB permitiu utilizar estruturas aninhadas para organizar as informações retornadas pelas requisições, possibilitando uma representação dos dados mais alinhada ao paradigma orientado a objetos e facilitando a visualização das relações entre os documentos.
+
+Também foram utilizados DTOs (Data Transfer Objects) para personalizar os dados expostos pela API, adaptando a estrutura das respostas conforme a necessidade de cada endpoint. Além disso, foram implementados tratamentos personalizados de exceções e respostas de erro padronizadas, proporcionando mensagens mais claras e consistentes para os clientes da aplicação.
+
+Por fim, o Postman foi utilizado para realizar os testes e validações dos endpoints da API.
+
+
 
 ## Modelo conceitual
-![Modelo Conceitual](https://github.com/soleralucas/assets/blob/main/workshop-springboot4-jpa/Captura%20de%20tela%202026-05-28%20183836.png)
-![Modelo Conceitual](https://github.com/soleralucas/assets/blob/main/workshop-springboot4-jpa/Captura%20de%20tela%202026-05-28%20182005.png)
+![Modelo Conceitual](https://github.com/soleralucas/assets/blob/main/curso-projeto-mongodb/Captura%20de%20tela%202026-06-02%20184401.png)
+![Modelo Conceitual](https://github.com/soleralucas/assets/blob/main/curso-projeto-mongodb/Captura%20de%20tela%202026-06-02%20185736.png)
 
 # Tecnologias utilizadas
+
 ## Back end
-- Java
-- Spring Boot
-- JPA / Hibernate
-- Maven
+
+* Java 26
+* Spring Boot
+* Spring Data MongoDB
+* Maven
+
+## Banco de dados
+
+* MongoDB
 
 ## Testes de API
-- Postman
 
-## Implantação em produção
-- Banco de dados: H2
+* Postman
 
 # Como executar o projeto
 
 ## Pré-requisitos
 
-- Java 25
-- Maven
-- Spring Tools Suite (STS), Eclipse ou IntelliJ
-
-O projeto utiliza o banco de dados H2 em memória, não sendo necessária a instalação de um banco de dados externo.
+* Java 26
+* Maven
+* MongoDB
+* MongoDB Compass
+* Spring Tools Suite (STS), Eclipse ou IntelliJ
 
 ## Clonar o repositório
 
 ```bash
-git clone git@github.com:soleralucas/workshop-springboot4-jpa.git
+git clone git@github.com:soleralucas/curso-projeto-mongodb.git
 
-cd workshop-springboot4-jpa
+cd curso-projeto-mongodb
 ```
 
-## Executar a aplicação
+## Importando o projeto
 
-Importe o projeto na IDE como um projeto Maven.
+### STS / Eclipse
 
-Em seguida, localize a classe principal da aplicação e execute:
+1. Abra a IDE.
+2. Clique em:
+
+```text
+File → Import
+```
+
+3. Expanda:
+
+```text
+Maven
+```
+
+4. Selecione:
+
+```text
+Existing Maven Projects
+```
+
+5. Clique em:
+
+```text
+Next
+```
+
+6. Em:
+
+```text
+Root Directory
+```
+
+clique em:
+
+```text
+Browse
+```
+
+7. Selecione a pasta do projeto clonado.
+8. Clique em:
+
+```text
+Finish
+```
+
+## Configuração do MongoDB
+
+Instale o MongoDB e o MongoDB Compass.
+
+Abra o MongoDB Compass e crie uma conexão utilizando a configuração padrão:
+
+```text
+Host: localhost
+Port: 27017
+```
+
+## Configuração do application.properties
+
+Verifique o arquivo:
+
+```text
+src/main/resources/application.properties
+```
+
+O projeto está configurado para utilizar:
+
+```properties
+spring.application.name=workshopmongo
+spring.mongodb.uri=mongodb://localhost:27017/workshop_mongo
+```
+
+Caso esteja utilizando outra porta ou outro servidor MongoDB, ajuste a URI conforme necessário.
+
+Ao iniciar a aplicação, o banco de dados `workshop_mongo` será criado automaticamente.
+
+## Executando a aplicação
+
+Localize a classe principal da aplicação e execute:
 
 ```text
 Run As → Spring Boot App
@@ -60,31 +146,11 @@ http://localhost:8080
 
 Após a inicialização, o servidor permanecerá em execução aguardando requisições da API.
 
-## Console H2
-
-O console do banco de dados pode ser acessado em:
-
-```text
-http://localhost:8080/h2-console
-```
-
-Utilize as seguintes credenciais:
-
-```text
-JDBC URL: jdbc:h2:mem:testdb
-Usuário: sa
-Senha:
-```
-
-Por meio do console H2 é possível visualizar as tabelas e acompanhar as alterações realizadas pela aplicação.
-
-## Testes da API
+# Testes da API
 
 As requisições da API podem ser testadas utilizando o Postman, permitindo validar os endpoints e verificar o funcionamento da aplicação.
 
-Além disso, as alterações realizadas podem ser acompanhadas pelo console H2 através do navegador.
-
-### Exemplo de requisição
+Além disso, os dados armazenados e as alterações realizadas podem ser acompanhados através do MongoDB Compass.
 
 Endpoint:
 
@@ -94,7 +160,7 @@ GET /users
 
 Resposta obtida através do Postman:
 
-![Exemplo de Requisição](https://github.com/soleralucas/assets/blob/main/workshop-springboot4-jpa/Captura%20de%20tela%202026-05-29%20211547.png)
+![Exemplo de Requisição](https://github.com/soleralucas/assets/blob/main/curso-projeto-mongodb/Captura%20de%20tela%202026-06-02%20192620.png)
 
 # Autor
 
