@@ -183,7 +183,7 @@ Retorna todos os posts de um usuario especifico, com seu respectivo autor e tamb
 
 ### Resposta obtida através do Postman
 
-![Exemplo de Requisição](https://github.com/soleralucas/assets/blob/main/curso-projeto-mongodb/Captura%20de%20tela%202026-06-03%20141111.png)
+![Exemplo de Requisição](https://github.com/soleralucas/assets/blob/main/curso-projeto-mongodb/Captura%20de%20tela%202026-06-03%20150513.png)
 
 ### Endpoint
 
