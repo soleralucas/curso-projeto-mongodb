@@ -162,7 +162,7 @@ Retorna todos os usuários cadastrados na aplicação.
 
 ### Resposta obtida através do Postman
 
-![Exemplo de Requisição](LINK_DA_IMAGEM)
+![Exemplo de Requisição](https://github.com/soleralucas/assets/blob/main/curso-projeto-mongodb/Captura%20de%20tela%202026-06-03%20170546.png)
 
 ---
 
@@ -176,7 +176,7 @@ Retorna um usuário específico com base no identificador informado.
 
 ### Resposta obtida através do Postman
 
-![Exemplo de Requisição](LINK_DA_IMAGEM)
+![Exemplo de Requisição](https://github.com/soleralucas/assets/blob/main/curso-projeto-mongodb/Captura%20de%20tela%202026-06-03%20170612.png)
 
 ---
 
@@ -190,7 +190,7 @@ Retorna todas as publicações de um usuário específico, incluindo o autor de 
 
 ### Resposta obtida através do Postman
 
-![Exemplo de Requisição](LINK_DA_IMAGEM)
+![Exemplo de Requisição](https://github.com/soleralucas/assets/blob/main/curso-projeto-mongodb/Captura%20de%20tela%202026-06-03%20170701.png)
 
 ---
 
@@ -204,7 +204,7 @@ Cria um novo usuário.
 
 ### Corpo da requisição enviado através do Postman
 
-![Exemplo de Requisição](LINK_DA_IMAGEM)
+![Exemplo de Requisição](https://github.com/soleralucas/assets/blob/main/curso-projeto-mongodb/Captura%20de%20tela%202026-06-03%20171010.png)
 
 > **Observação:** O identificador (id) é gerado automaticamente pela aplicação. Após a criação do recurso, sua localização pode ser obtida através do cabeçalho `Location` da resposta HTTP (Status 201 - Created).
 
@@ -220,7 +220,7 @@ Atualiza as informações de um usuário existente.
 
 ### Corpo da requisição enviado através do Postman
 
-![Exemplo de Requisição](LINK_DA_IMAGEM)
+![Exemplo de Requisição](https://github.com/soleralucas/assets/blob/main/curso-projeto-mongodb/Captura%20de%20tela%202026-06-03%20171602.png)
 
 ---
 
@@ -234,7 +234,7 @@ Retorna uma publicação específica, incluindo seu autor e os comentários asso
 
 ### Resposta obtida através do Postman
 
-![Exemplo de Requisição](LINK_DA_IMAGEM)
+![Exemplo de Requisição](https://github.com/soleralucas/assets/blob/main/curso-projeto-mongodb/Captura%20de%20tela%202026-06-03%20172449.png)
 
 ---
 
@@ -248,7 +248,7 @@ Realiza uma busca de publicações com base no texto informado no título.
 
 ### Resposta obtida através do Postman
 
-![Exemplo de Requisição](LINK_DA_IMAGEM)
+![Exemplo de Requisição](https://github.com/soleralucas/assets/blob/main/curso-projeto-mongodb/Captura%20de%20tela%202026-06-03%20172927.png)
 
 > **Observação:** Esta consulta pode ser implementada utilizando Query Methods ou consultas customizadas com `@Query`.
 
@@ -264,7 +264,7 @@ Realiza uma busca avançada de publicações utilizando um texto de pesquisa e u
 
 ### Resposta obtida através do Postman
 
-![Exemplo de Requisição](LINK_DA_IMAGEM)
+![Exemplo de Requisição](https://github.com/soleralucas/assets/blob/main/curso-projeto-mongodb/Captura%20de%20tela%202026-06-03%20173525.png)
 
 > **Observação:** Esta consulta foi implementada utilizando consultas customizadas com `@Query`.
 
