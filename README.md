@@ -152,15 +152,45 @@ As requisições da API podem ser testadas utilizando o Postman, permitindo vali
 
 Além disso, os dados armazenados e as alterações realizadas podem ser acompanhados através do MongoDB Compass.
 
-Endpoint:
+### Endpoint
 
 ```http
 GET /users
 ```
+Retorna todos os usuários cadastrados na aplicação.
 
-Resposta obtida através do Postman:
+### Resposta obtida através do Postman
 
 ![Exemplo de Requisição](https://github.com/soleralucas/assets/blob/main/curso-projeto-mongodb/Captura%20de%20tela%202026-06-02%20192620.png)
+
+```http
+GET /users/id do usuario
+```
+Retorna um usuario especifico
+
+### Resposta obtida através do Postman
+
+![Exemplo de Requisição](https://github.com/soleralucas/assets/blob/main/curso-projeto-mongodb/Captura%20de%20tela%202026-06-03%20140759.png)
+
+```http
+GET /users/id do usuario/posts
+```
+Retorna todos os posts de um usuario especifico, com seu respectivo autor e tambem  os seus comentarios aninhados com cada autor
+
+### Resposta obtida através do Postman
+
+![Exemplo de Requisição](https://github.com/soleralucas/assets/blob/main/curso-projeto-mongodb/Captura%20de%20tela%202026-06-03%20141111.png)
+
+
+```http
+POST /users
+```
+Cria um usuario novo(id é criado automaticamente e possui refenreica no headers dessa requisição)
+
+### Resposta obtida através do Postman
+
+![Exemplo de Requisição](https://github.com/soleralucas/assets/blob/main/curso-projeto-mongodb/Captura%20de%20tela%202026-06-03%20141714.png)
+
 
 # Autor
 
