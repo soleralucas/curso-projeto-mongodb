@@ -1,7 +1,7 @@
 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/devsuperior/sds1-wmazoni/blob/master/LICENSE) 
 
-Sobre o projeto
+# Sobre o projeto
 
 API desenvolvida utilizando Java com Spring Boot e MongoDB durante a realização de um curso de programação Java. O projeto consiste em uma API baseada em uma rede social simplificada, contendo as entidades User, Post e Comment, além dos relacionamentos entre elas, permitindo que usuários realizem publicações e interajam por meio de comentários.
 
