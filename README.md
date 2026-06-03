@@ -163,6 +163,8 @@ Retorna todos os usuários cadastrados na aplicação.
 
 ![Exemplo de Requisição](https://github.com/soleralucas/assets/blob/main/curso-projeto-mongodb/Captura%20de%20tela%202026-06-02%20192620.png)
 
+### Endpoint
+
 ```http
 GET /users/id do usuario
 ```
@@ -171,6 +173,8 @@ Retorna um usuario especifico
 ### Resposta obtida através do Postman
 
 ![Exemplo de Requisição](https://github.com/soleralucas/assets/blob/main/curso-projeto-mongodb/Captura%20de%20tela%202026-06-03%20140759.png)
+
+### Endpoint
 
 ```http
 GET /users/id do usuario/posts
@@ -181,6 +185,7 @@ Retorna todos os posts de um usuario especifico, com seu respectivo autor e tamb
 
 ![Exemplo de Requisição](https://github.com/soleralucas/assets/blob/main/curso-projeto-mongodb/Captura%20de%20tela%202026-06-03%20141111.png)
 
+### Endpoint
 
 ```http
 POST /users
