@@ -157,44 +157,116 @@ Além disso, os dados armazenados e as alterações realizadas podem ser acompan
 ```http
 GET /users
 ```
+
 Retorna todos os usuários cadastrados na aplicação.
 
 ### Resposta obtida através do Postman
 
-![Exemplo de Requisição](https://github.com/soleralucas/assets/blob/main/curso-projeto-mongodb/Captura%20de%20tela%202026-06-02%20192620.png)
+![Exemplo de Requisição](LINK_DA_IMAGEM)
+
+---
 
 ### Endpoint
 
 ```http
-GET /users/id do usuario
+GET /users/{id}
 ```
-Retorna um usuario especifico
+
+Retorna um usuário específico com base no identificador informado.
 
 ### Resposta obtida através do Postman
 
-![Exemplo de Requisição](https://github.com/soleralucas/assets/blob/main/curso-projeto-mongodb/Captura%20de%20tela%202026-06-03%20140759.png)
+![Exemplo de Requisição](LINK_DA_IMAGEM)
+
+---
 
 ### Endpoint
 
 ```http
-GET /users/id do usuario/posts
+GET /users/{id}/posts
 ```
-Retorna todos os posts de um usuario especifico, com seu respectivo autor e tambem  os seus comentarios aninhados com cada autor
+
+Retorna todas as publicações de um usuário específico, incluindo o autor de cada publicação e seus respectivos comentários aninhados.
 
 ### Resposta obtida através do Postman
 
-![Exemplo de Requisição](https://github.com/soleralucas/assets/blob/main/curso-projeto-mongodb/Captura%20de%20tela%202026-06-03%20150513.png)
+![Exemplo de Requisição](LINK_DA_IMAGEM)
+
+---
 
 ### Endpoint
 
 ```http
 POST /users
 ```
-Cria um usuario novo(id é criado automaticamente e possui refenreica no headers dessa requisição)
+
+Cria um novo usuário.
+
+### Corpo da requisição enviado através do Postman
+
+![Exemplo de Requisição](LINK_DA_IMAGEM)
+
+> **Observação:** O identificador (id) é gerado automaticamente pela aplicação. Após a criação do recurso, sua localização pode ser obtida através do cabeçalho `Location` da resposta HTTP (Status 201 - Created).
+
+---
+
+### Endpoint
+
+```http
+PUT /users/{id}
+```
+
+Atualiza as informações de um usuário existente.
+
+### Corpo da requisição enviado através do Postman
+
+![Exemplo de Requisição](LINK_DA_IMAGEM)
+
+---
+
+### Endpoint
+
+```http
+GET /posts/{id}
+```
+
+Retorna uma publicação específica, incluindo seu autor e os comentários associados.
 
 ### Resposta obtida através do Postman
 
-![Exemplo de Requisição](https://github.com/soleralucas/assets/blob/main/curso-projeto-mongodb/Captura%20de%20tela%202026-06-03%20141714.png)
+![Exemplo de Requisição](LINK_DA_IMAGEM)
+
+---
+
+### Endpoint
+
+```http
+GET /posts/titlesearch?text={texto}
+```
+
+Realiza uma busca de publicações com base no texto informado no título.
+
+### Resposta obtida através do Postman
+
+![Exemplo de Requisição](LINK_DA_IMAGEM)
+
+> **Observação:** Esta consulta pode ser implementada utilizando Query Methods ou consultas customizadas com `@Query`.
+
+---
+
+### Endpoint
+
+```http
+GET /posts/fullsearch?text={texto}&minDate={dataInicial}&maxDate={dataFinal}
+```
+
+Realiza uma busca avançada de publicações utilizando um texto de pesquisa e um intervalo de datas. A consulta retorna posts cujo título ou comentários contenham o texto informado, respeitando o período especificado.
+
+### Resposta obtida através do Postman
+
+![Exemplo de Requisição](LINK_DA_IMAGEM)
+
+> **Observação:** Esta consulta foi implementada utilizando consultas customizadas com `@Query`.
 
 
 # Autor
